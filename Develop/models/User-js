@@ -29,6 +29,7 @@ User.init(
     },
   },
   {
+    //Hooks for password encyption
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
