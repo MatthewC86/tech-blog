@@ -7,7 +7,7 @@ class Comment extends Model {
   }
 }
 
-User.init(
+Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
