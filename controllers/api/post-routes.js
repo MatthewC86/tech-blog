@@ -15,7 +15,7 @@ router.post("/", withAuth, async (req, res) => {
   try {
     const postData = await Post.create({
       title: req.body.title,
-      comment_text: req.body.comment_text,
+      context: req.body.context,
       user_id: req.session.user_id,
     });
 
@@ -30,7 +30,7 @@ router.put("/:id", withAuth, async (req, res) => {
     const postData = await Post.update(
       {
         title: req.body.title,
-        comment_text: req.body.comment_text,
+        context: req.body.context,
       },
       {
         where: {
