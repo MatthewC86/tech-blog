@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const { Blog } = require('../models');
-// const homeRoutes = require('./home-routes.js');
-// const dashboardRoutes = require('./dashboard-routes.js');
+const homeRoutes = require('./home-routes.js');
+ 
 
 
 router.use('/api', apiRoutes);
-// router.use('/dashboard', dashboardRoutes);
-// router.use('/', homeRoutes);
+ 
+router.use('/', homeRoutes);
 
 
 router.get('/', async (req, res) => {
